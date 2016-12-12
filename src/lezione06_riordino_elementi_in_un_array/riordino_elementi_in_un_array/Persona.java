@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lezione05_modifiche_su_metodi_oggetti_e_uso_extends;
+package lezione06_riordino_elementi_in_un_array.riordino_elementi_in_un_array;
 
+import lezione05_modifiche_su_metodi_oggetti_e_uso_extends.*;
 import java.util.Date;
 import java.util.Objects;
 
