@@ -5,6 +5,7 @@
  */
 package lezione06_riordino_elementi_in_un_array.riordino_elementi_in_un_array;
 
+import util.LibreriaMetodiArray;
 /**
  *
  * @author tss
@@ -30,53 +31,38 @@ public class DemoOrdinaArray {
         Persona persone[] = new Persona[]{p1, p2, p3, p4, p5, p6, p7, p8};
 
         //stampa array        
-        stampaArray(persone);
+        LibreriaMetodiArray.stampaArray(persone);
 
         //richiama metodo ordina passando l'array di persone ordine crescente
-        ordinaLista(persone);
+        LibreriaMetodiArray.ordinaLista(persone);
 
         //stampa array ordinato        
-        stampaArray(persone);
+        LibreriaMetodiArray.stampaArray(persone);
 
-    }
-
-    private static void ordinaLista(Persona[] persone) {
-
-        /*for(int i = 0; (i+1) < persona.length; i++){        più leggero da scrivere
-            if(persone[i].compareTo(persone[i+1]) > 0){
-                tmp = persone[i];
-                persone [i] = persone[i+1];
-                persone[i+1] = tmp;
-                i = 0;
-          }*/
-        int i = 0;
-        boolean control = false;
-        while (control == false) {
-            Persona tmp;
-            if (persone[i].compareTo(persone[i + 1]) > 0) {
-                tmp = persone[i];
-                persone[i] = persone[i + 1];
-                persone[i + 1] = tmp;
-                i = 0;
-            } else {
-                i++;
-                if ((i + 1) == persone.length) {
-                    control = true;
-                }
-            }
-        }
-    }
-
-    private static void stampaArray(Persona[] persone) {
+        Message[] messaggi = new Message[3];
+        messaggi[0] = new Message("ciao bel maschione");
+        messaggi[1] = new Message("ciao bel maschiaccio");
+        messaggi[2] = new Message("ciao bel maschiello");
+        
+        LibreriaMetodiArray.stampaArray(messaggi);
+        LibreriaMetodiArray.ordinaLista(messaggi);
+        LibreriaMetodiArray.stampaArray(messaggi);
+        
+        System.out.println(LibreriaMetodiArray.cerca(messaggi, new Message("ciao bel maschione")));
+    }    
+    
+    /*private static void stampaArray(Persona[] persone) {
         String report = "";
         int i = 0;
         for (Persona persona : persone) {
             //report += persona.toString() + "\n";  
-            System.out.println(persone[i].toString());
+            System.out.println(persona/*persone[i].toString());
             i++;
         }
 
         System.out.println("\n");
-    }
+    }*/
+    
+    
 
 }
