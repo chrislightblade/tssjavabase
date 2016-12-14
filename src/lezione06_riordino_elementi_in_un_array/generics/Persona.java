@@ -67,7 +67,8 @@ public class Persona implements Comparable<Persona>{
         this.cognome = cognome;
     }
     
-    @Override
+    @Override//annotazione, Metadati, sono usate nella Enterprise, aggiungono informazioni pe compilatore o altro
+    //oppure per la Virtual Machine in runTime. 
     public String toString(){
         return nome + "." + cognome;
     }    

@@ -5,7 +5,11 @@
  */
 package lezione06_riordino_elementi_in_un_array.riordino_elementi_in_un_array;
 
+import java.text.ParseException;
+import java.util.Date;
+import util.DateFunction;
 import util.LibreriaMetodiArray;
+
 /**
  *
  * @author tss
@@ -15,9 +19,9 @@ public class DemoOrdinaArray {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
-
+        
         //crea array di persone
         Persona p3 = new Persona("Mario", "Mario");
         Persona p2 = new Persona("Mario", "Luigi");
@@ -49,6 +53,9 @@ public class DemoOrdinaArray {
         LibreriaMetodiArray.stampaArray(messaggi);
         
         System.out.println(LibreriaMetodiArray.cerca(messaggi, new Message("ciao bel maschione")));
+        
+        System.out.println(DateFunction.converti(new Date()));
+        System.out.println(DateFunction.converti("19/01/1992"));
     }    
     
     /*private static void stampaArray(Persona[] persone) {

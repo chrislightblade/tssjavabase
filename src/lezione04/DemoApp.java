@@ -22,7 +22,7 @@ public class DemoApp {
         Bicycle bici = new Bicycle(0, 1);
         bici.setSpeed(10);
         
-        Box box = new Box(n, bici);
+        Box box = new Box(1, bici);
         int numero = 10;
         box.setN(numero);
     }
